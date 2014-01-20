@@ -1,0 +1,19 @@
+{
+  "name": "digbil",
+  "version": "0.0.0",
+  "authors": [
+    "zoie0312 <greenmoonshisu@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0.3"
+  }
+}
