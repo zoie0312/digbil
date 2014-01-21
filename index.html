@@ -1,10 +1,264 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-  	<h1>Hi......</h1>
+    <style type="text/css">
+
+    </style>
+    <!-- Header -->
+    <header class="" role="banner">
+      <div class="container">
+        <nav class="collapse navbar-collapse" id="" role="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Campaign</a></li>
+            <li><a href="#">Canvas</a></li>
+            <li><a href="#">Shop</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Matt<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>111</li>
+                <li>222</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Body -->
+    <div class="container">
+      <div id="header_bar">
+        <img src="/assets/logo4.png">
+        <button type="submit" class="btn btn-default navbar-btn navbar-right" id="campaign_btn">
+          <span ><img src="/assets/start_campaign.png"></span>
+          Start a Campaign
+        </button>
+      </div>
+      <div class="container">
+        <div class="row" id="content">
+
+          <div class="col-lg-1" id="tab_bar">
+            <div>
+              <a href="#"><img src="/assets/tab1.png" alt="content_dashboard"></a>
+            </div>
+            <div>
+              <a href="#"><img src="/assets/tab2.png" alt="content_campaign"></a>
+            </div>
+            <div>
+              <a href="#"><img src="/assets/tab3.png" alt="content_library"></a>
+            </div>
+            <div>
+              <a href="#"><img src="/assets/tab4.png" alt="content_transaction"></a>
+            </div>
+            <div>
+              <a href="#"><img src="/assets/tab5.png" alt="content_help"></a>
+            </div>
+          </div>
+
+          <div class="col-lg-11" id="content_body">
+            <div class="col-lg-12 content_body" id="content_dashboard">
+              <h3>Dashboard page</h3>
+            </div>
+            <div class="col-lg-12 content_body" id="content_library">
+              <h3>Library page</h3>
+            </div>
+            <div class="col-lg-12 content_body" id="content_transaction">
+              <h3>Transaction page</h3>
+            </div>
+            <div class="col-lg-12 content_body" id="content_help">
+              <h3>Help page</h3>
+            </div>
+
+            <div class="col-lg-12 content_body" id="content_campaign">
+              <div  id="content_top">
+                <span>
+                  <button type="submit" class="btn btn-sm navbar-btn" id="btn_back">
+                      <span ><img src="/assets/up.png"></span>
+                      Back
+                  </button>
+                </span>
+                <span>
+                  <a href="#">Ongoing Campaigns</a>
+                  <span> > Organic Cosmetic</span>
+                </span>
+              </div>
+
+              <div class="row" id="content_title">
+                <div id="triangle"></div>
+                <div class="col-md-4 col-md-offset-3" align="center">
+                  <h4>Organic Cosmetic</h4>
+                </div>
+                <div class="col-md-4 col-md-offset-1" align="right">
+                  <img src="/assets/hammer.png">
+                  Administrator
+                </div>
+              </div>
+
+              <div class="container" id="content_main">
+                <div class="row">
+                  <div class="col-lg-3" id="">
+                    <video width="160" height="120">
+                      <source src="movie.mp4" type="video/mp4">
+                    </video>
+                    <table class="table table-condensed">
+                      <tr>
+                        <td>ID Number</td>
+                        <td class="campaign-detail">CP 100-261-225</td>
+                      </tr>
+                      <tr>
+                        <td>length</td>
+                        <td class="campaign-detail">30 sec.</td>
+                      </tr>
+                      <tr>
+                        <td>Money Out</td>
+                        <td class="campaign-detail">
+                          1200
+                          <span style="color: black;">USD</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Created With</td>
+                        <td class="campaign-detail">Auto Pilot</td>
+                      </tr>
+                      <tr>
+                        <td>Starts From</td>
+                        <td class="campaign-detail">06/01/2011</td>
+                      </tr>
+                      <tr>
+                        <td>Ends On</td>
+                        <td class="campaign-detail">06/30/2011</td>
+                      </tr>
+                    </table>
+
+                  </div>
+                  <div class="col-lg-8" id="accordion_wrapper">
+                    <div class="row menu_head">
+                      <div class="col-lg-6 menu_title">
+                        <span><img src="/assets/playback.png"></span>
+                        Playbacks
+                      </div>
+                      <!--<div class="col-lg-6 menu_arrow" align="right">
+                        <a href="#"><img src="/assets/arrow_down.png"></a>
+                      </div>-->
+                    </div>
+                    <div class="menu_body">
+                      <p>There is nothing to show!</p>
+                    </div>
+                    <div class="row menu_head">
+                      <div class="col-lg-6 menu_title">
+                        <span><img src="/assets/member.png"></span>
+                        Members
+                      </div>
+                      <!--<div class="col-lg-6 menu_arrow" align="right">
+                        <a href="#"><img src="/assets/arrow_down.png"></a>
+                      </div>-->
+                    </div>
+                    <div class="menu_body">
+                      <p>There is nothing to show!</p>
+                    </div>
+                    <div class="row menu_head menu_head_active">
+                      <div class="col-lg-6 menu_title">
+                        <span><img src="/assets/manage.png"></span>
+                        Manage
+                      </div>
+                      <!--<div class="col-lg-6 menu_arrow" align="right">
+                        <a href="#"><img src="/assets/arrow_down.png"></a>
+                      </div>-->
+                    </div>
+                    <div class="menu_body">
+                      <table class="table menu_table">
+                        <tr>
+                          <td>Edit this campaign? (Time, Content, Budget...etc.)</td>
+                          <td align="right">
+                            <button type="button" class="btn menu_table_button">Edit</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Any issue about managing campaign?</td>
+                          <td align="right">
+                            <button type="button" class="btn menu_table_button">Help</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Stop this campaign right away?</td>
+                          <td align="right">
+                            <button type="button" class="btn menu_table_button">Stop</button>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- id="content_main" -->
+
+            </div> <!-- id="content_campaign" -->
+          </div> <!-- id="content_body" -->
+
+        </div><!-- id="content" -->
+      </div>
+    </div><!-- Main Body -->
+
+    <!-- Footer -->
+    <div class="container footer">
+      <div class="row">
+        <div class="col-lg-3 footer_language">
+          <!--<button type="button" class="language_btn btn"></button>-->
+          <button type="button" class="language_btn btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span><img src="/assets/american_flag.png"></span>
+            U.S. English
+            <span class="caret"></span>
+          </button>
+        </div>
+        <div class="col-lg-1 footer_text">About DigBil</div>
+        <div class="col-lg-1 footer_text">tutorial</div>
+        <div class="col-lg-1 footer_text">Support</div>
+        <div class="col-lg-1 footer_text footer_term">Terms of Use</div>
+        <div class="col-lg-1 footer_text">contact</div>
+        <div class="col-lg-1 footer_img"><img src="/assets/f.png"></div>
+        <div class="col-lg-1 footer_img"><img src="/assets/t.png"></div>
+        <div class="col-lg-3 footer_text">copyright 2011  DIGBIL All Rights reserved.</div>
+      </div>
+    </div>
+
+    <script>
+      $("#accordion_wrapper div.menu_head").click(function(){
+
+        $(this).addClass("menu_head_active");
+        $(this).next("div.menu_body").slideToggle(200).siblings("div.menu_body").slideUp("slow");
+        $(this).siblings().removeClass("menu_head_active");
+
+    //$(this).css({backgroundImage:"url(down.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+    //$(this).siblings().css({backgroundImage:"url(left.png)"});
+      });
+    </script>
+
+    <script>
+      $("#tab_bar div a img").click(function(){
+        console.log("img clicked");
+        console.log($(this).attr("alt"));
+        id_selector = "#" + $(this).attr("alt");
+        $(id_selector).show();
+        $(id_selector).siblings().hide();
+
+      });
+    </script>
+
+    <script>
+      $("button.menu_table_button").click(function(){
+        alert("you just click " + $(this).text() + " button");
+
+      });
+    </script>
   </body>
 
 </html>
