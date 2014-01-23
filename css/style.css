@@ -1,7 +1,7 @@
 header{
 	background-color: #292421;
 }
-div.container{
+.container{
 }
 nav li a{
 	color: #F0F8FF;
@@ -23,7 +23,7 @@ nav li a{
 	margin-left: 0px;
   height: 700px;
 }
-div.content_body{
+.content_body{
   display: none;
 }
 div.content_body:last-of-type{
@@ -74,7 +74,7 @@ td.campaign-detail{
   margin-top: 15px;
   margin-left: 20px;
 }
-div.menu_head{
+.menu_head{
 
   border-radius: 4px;
   height: 50px;
@@ -83,27 +83,27 @@ div.menu_head{
   margin-top: 5px;
   background: rgb(167, 165, 162) url("/assets/arrow_down.png") right no-repeat;
 }
-div.menu_head_active{
+.menu_head_active{
   background: rgb(76, 136, 218) url("/assets/arrow_up.png") right no-repeat;
   color: white;
 }
-div.menu_head_inactive{
+.menu_head_inactive{
   background-color: rgb(167, 165, 162) url("/assets/arrow_down.png") right no-repeat;
   color: black;
 }
-div.menu_title{
+.menu_title{
   margin-top: 12px;
 }
-div.menu_arrow{
+.menu_arrow{
   margin-top: 5px;
 }
-div.menu_body{
+.menu_body{
   background-color: rgb(205, 207, 208);
   width: 660px;
   margin-left: -15px;
   display: none;
 }
-div.menu_body:last-of-type{
+.menu_body:last-of-type{
   display: block;
 }
 table.menu_table{
@@ -119,12 +119,12 @@ table.menu_table tr{
 table.menu_table tr:last-of-type{
   border-bottom: 0;
 }
-button.menu_table_button{
+.menu_table_button{
   color: white;
   background-color: rgb(167, 165, 162);
   width: 100px;
 }
-div.footer{
+.footer{
   margin-right: 0px;
   margin-left: 0px;
   width: 100%;
@@ -132,21 +132,21 @@ div.footer{
   background-color: rgb(91, 90, 89);
   color: rgb(161, 203, 239);
 }
-div.footer_language{
+.footer_language{
   width: 15%;
   margin-top: 20px;
 }
-div.footer_term{
+.footer_term{
   width: 10%;
 }
-div.footer_text{
+.footer_text{
   margin-top: 40px;
 }
-div.footer_img{
+.footer_img{
   width: 6.5%;
   margin-top: 26px;
 }
-button.language_btn{
+.language_btn{
   color: rgb(161, 203, 239);
   background-color: rgb(67, 66, 67);
   border: 0px;

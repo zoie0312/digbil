@@ -3,14 +3,10 @@
   <head>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/bower_components/jquery/jquery.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <style type="text/css">
 
-    </style>
     <!-- Header -->
     <header class="" role="banner">
       <div class="container">
@@ -48,19 +44,19 @@
 
           <div class="col-lg-1" id="tab_bar">
             <div>
-              <a href="#"><img src="/assets/tab1.png" alt="content_dashboard"></a>
+              <a href="#dashboard"><img src="/assets/tab1.png" alt="content_dashboard"></a>
             </div>
             <div>
-              <a href="#"><img src="/assets/tab2.png" alt="content_campaign"></a>
+              <a href="#campaign"><img src="/assets/tab2.png" alt="content_campaign"></a>
             </div>
             <div>
-              <a href="#"><img src="/assets/tab3.png" alt="content_library"></a>
+              <a href="#library"><img src="/assets/tab3.png" alt="content_library"></a>
             </div>
             <div>
-              <a href="#"><img src="/assets/tab4.png" alt="content_transaction"></a>
+              <a href="#transaction"><img src="/assets/tab4.png" alt="content_transaction"></a>
             </div>
             <div>
-              <a href="#"><img src="/assets/tab5.png" alt="content_help"></a>
+              <a href="#help"><img src="/assets/tab5.png" alt="content_help"></a>
             </div>
           </div>
 
@@ -105,7 +101,7 @@
 
               <div class="container" id="content_main">
                 <div class="row">
-                  <div class="col-lg-3" id="">
+                  <div class="col-lg-3">
                     <video width="160" height="120">
                       <source src="movie.mp4" type="video/mp4">
                     </video>
@@ -138,41 +134,41 @@
                         <td class="campaign-detail">06/30/2011</td>
                       </tr>
                     </table>
+                  </div> <!-- campaign details -->
 
-                  </div>
                   <div class="col-lg-8" id="accordion_wrapper">
                     <div class="row menu_head">
-                      <div class="col-lg-6 menu_title">
+                      <div class="col-lg-6">
+                      <div class="menu_title">
                         <span><img src="/assets/playback.png"></span>
                         Playbacks
                       </div>
-                      <!--<div class="col-lg-6 menu_arrow" align="right">
-                        <a href="#"><img src="/assets/arrow_down.png"></a>
-                      </div>-->
+                      </div>
+
                     </div>
                     <div class="menu_body">
                       <p>There is nothing to show!</p>
                     </div>
+
                     <div class="row menu_head">
-                      <div class="col-lg-6 menu_title">
+                      <div class="col-lg-6">
+                      <div class="menu_title">
                         <span><img src="/assets/member.png"></span>
                         Members
                       </div>
-                      <!--<div class="col-lg-6 menu_arrow" align="right">
-                        <a href="#"><img src="/assets/arrow_down.png"></a>
-                      </div>-->
+                      </div>
                     </div>
                     <div class="menu_body">
                       <p>There is nothing to show!</p>
                     </div>
+
                     <div class="row menu_head menu_head_active">
-                      <div class="col-lg-6 menu_title">
+                      <div class="col-lg-6">
+                      <div class="menu_title">
                         <span><img src="/assets/manage.png"></span>
                         Manage
                       </div>
-                      <!--<div class="col-lg-6 menu_arrow" align="right">
-                        <a href="#"><img src="/assets/arrow_down.png"></a>
-                      </div>-->
+                      </div>
                     </div>
                     <div class="menu_body">
                       <table class="table menu_table">
@@ -195,7 +191,8 @@
                           </td>
                         </tr>
                       </table>
-                    </div>
+                    </div><!-- manage menu_body-->
+
                   </div>
                 </div>
 
@@ -212,7 +209,6 @@
     <div class="container footer">
       <div class="row">
         <div class="col-lg-3 footer_language">
-          <!--<button type="button" class="language_btn btn"></button>-->
           <button type="button" class="language_btn btn btn-default dropdown-toggle" data-toggle="dropdown">
             <span><img src="/assets/american_flag.png"></span>
             U.S. English
@@ -230,32 +226,30 @@
       </div>
     </div>
 
-    <script>
-      $("#accordion_wrapper div.menu_head").click(function(){
-
-        $(this).addClass("menu_head_active");
-        $(this).next("div.menu_body").slideToggle(200).siblings("div.menu_body").slideUp("slow");
-        $(this).siblings().removeClass("menu_head_active");
-
-    //$(this).css({backgroundImage:"url(down.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
-    //$(this).siblings().css({backgroundImage:"url(left.png)"});
-      });
-    </script>
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
-      $("#tab_bar div a img").click(function(){
-        console.log("img clicked");
-        console.log($(this).attr("alt"));
-        id_selector = "#" + $(this).attr("alt");
-        $(id_selector).show();
-        $(id_selector).siblings().hide();
+      $(document).ready(function(){
+        $("button.menu_table_button").click(function(){
+          alert("you just click " + $(this).text() + " button");
+        });
 
-      });
-    </script>
+        //tabs
+        $("#tab_bar div a img").click(function(){
+          //console.log($(this).attr("alt"));
+          id_selector = "#" + $(this).attr("alt");
+          $(id_selector).show();
+          $(id_selector).siblings().hide();
 
-    <script>
-      $("button.menu_table_button").click(function(){
-        alert("you just click " + $(this).text() + " button");
+        });
+
+        //accordion menu
+        $("#accordion_wrapper div.menu_head").click(function(){
+          $(this).addClass("menu_head_active");
+          $(this).next("div.menu_body").slideToggle(200).siblings("div.menu_body").slideUp("slow");
+          $(this).siblings().removeClass("menu_head_active");
+        });
 
       });
     </script>
