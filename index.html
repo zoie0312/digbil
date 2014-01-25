@@ -44,19 +44,19 @@
 
           <div class="col-lg-1" id="tab_bar">
             <div>
-              <a href="#dashboard"><img src="/assets/tab1.png" alt="content_dashboard"></a>
+              <a href="#dashboard" data-js="click_tab" data-content="content_dashboard"><img src="/assets/tab1.png"></a>
             </div>
             <div>
-              <a href="#campaign"><img src="/assets/tab2.png" alt="content_campaign"></a>
+              <a href="#campaign" data-js="click_tab" data-content="content_campaign"><img src="/assets/tab2.png"></a>
             </div>
             <div>
-              <a href="#library"><img src="/assets/tab3.png" alt="content_library"></a>
+              <a href="#library" data-js="click_tab" data-content="content_library"><img src="/assets/tab3.png"></a>
             </div>
             <div>
-              <a href="#transaction"><img src="/assets/tab4.png" alt="content_transaction"></a>
+              <a href="#transaction" data-js="click_tab" data-content="content_transaction"><img src="/assets/tab4.png"></a>
             </div>
             <div>
-              <a href="#help"><img src="/assets/tab5.png" alt="content_help"></a>
+              <a href="#help" data-js="click_tab" data-content="content_help"><img src="/assets/tab5.png"></a>
             </div>
           </div>
 
@@ -137,7 +137,7 @@
                   </div> <!-- campaign details -->
 
                   <div class="col-lg-8" id="accordion_wrapper">
-                    <div class="row menu_head">
+                    <div class="row menu_head" data-js="click_accordion_menu">
                       <div class="col-lg-6">
                       <div class="menu_title">
                         <span><img src="/assets/playback.png"></span>
@@ -150,7 +150,7 @@
                       <p>There is nothing to show!</p>
                     </div>
 
-                    <div class="row menu_head">
+                    <div class="row menu_head" data-js="click_accordion_menu">
                       <div class="col-lg-6">
                       <div class="menu_title">
                         <span><img src="/assets/member.png"></span>
@@ -162,7 +162,7 @@
                       <p>There is nothing to show!</p>
                     </div>
 
-                    <div class="row menu_head menu_head_active">
+                    <div class="row menu_head menu_head_active" data-js="click_accordion_menu">
                       <div class="col-lg-6">
                       <div class="menu_title">
                         <span><img src="/assets/manage.png"></span>
@@ -175,19 +175,19 @@
                         <tr>
                           <td>Edit this campaign? (Time, Content, Budget...etc.)</td>
                           <td align="right">
-                            <button type="button" class="btn menu_table_button">Edit</button>
+                            <button type="button" class="btn menu_table_button" data-js="click_btn_alert">Edit</button>
                           </td>
                         </tr>
                         <tr>
                           <td>Any issue about managing campaign?</td>
                           <td align="right">
-                            <button type="button" class="btn menu_table_button">Help</button>
+                            <button type="button" class="btn menu_table_button" data-js="click_btn_alert">Help</button>
                           </td>
                         </tr>
                         <tr>
                           <td>Stop this campaign right away?</td>
                           <td align="right">
-                            <button type="button" class="btn menu_table_button">Stop</button>
+                            <button type="button" class="btn menu_table_button" data-js="click_btn_alert">Stop</button>
                           </td>
                         </tr>
                       </table>
@@ -231,21 +231,21 @@
 
     <script>
       $(document).ready(function(){
-        $("button.menu_table_button").click(function(){
+        $("[data-js=click_btn_alert]").click(function(){
           alert("you just click " + $(this).text() + " button");
         });
 
         //tabs
-        $("#tab_bar div a img").click(function(){
+        $("[data-js=click_tab]").click(function(){
           //console.log($(this).attr("alt"));
-          id_selector = "#" + $(this).attr("alt");
+          id_selector = "#" + $(this).attr("data-content");
           $(id_selector).show();
           $(id_selector).siblings().hide();
 
         });
 
         //accordion menu
-        $("#accordion_wrapper div.menu_head").click(function(){
+        $("[data-js=click_accordion_menu]").click(function(){
           $(this).addClass("menu_head_active");
           $(this).next("div.menu_body").slideToggle(200).siblings("div.menu_body").slideUp("slow");
           $(this).siblings().removeClass("menu_head_active");
